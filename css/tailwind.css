@@ -23,20 +23,19 @@
     border-right: 15px solid #1e2329;
 }
 
-button, button::after {
+.glitch, .glitch::after {
     display: flex;
     justify-content: center;
     align-items: center;
     background: linear-gradient(45deg, transparent 5%, #F4B301 5%);
     border: 0;
     letter-spacing: 3px;
-    line-height: 88px;
     box-shadow: 6px 0px 0px #ffffff;
     outline: transparent;
     position: relative;
   }
   
-  button::after {
+  .glitch::after {
     --slice-0: inset(50% 50% 50% 50%);
     --slice-1: inset(80% -6px 0 0);
     --slice-2: inset(50% -6px 30% 0);
@@ -56,7 +55,7 @@ button, button::after {
     clip-path: var(--slice-0);
   }
   
-  button:hover::after {
+  .glitch:hover::after {
     animation: 1s glitch;
     animation-timing-function: steps(2, end);
   }
@@ -113,4 +112,17 @@ button, button::after {
     background-color: transparent;
     background-image: radial-gradient(#ffde84 1.75px, transparent 1.75px);
     background-size: 35px 35px;
+  }
+
+  .horizontal {
+    grid-column: span 2;
+  }
+  
+  .vertical {
+    grid-row: span 2;
+  }
+  
+  .big {
+    grid-column: span 2;
+    grid-row: span 2;
   }
